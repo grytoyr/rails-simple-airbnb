@@ -1,2 +1,31 @@
-<h1>Flats#new</h1>
-<p>Find me in app/views/flats/new.html.erb</p>
+<div class="page-wrap">
+  <div class="form-container">
+
+    <h1>Add new flat</h1>
+
+  <%= simple_form_for(@flat) do |f| %>
+
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :image %>
+      <%= f.input :description %>
+      <%= f.input :guests %>
+      <%= f.input :price %>
+
+      <div class="button-wrap">
+
+         <div class="article-menu-item">
+          <%= link_to flats_path do %>
+            <i class="fas fa-arrow-left"></i>
+          <% end %>
+        </div>
+
+        <%= f.submit class: 'button' %>
+
+      </div>
+
+
+    <% end %>
+
+  </div>
+</div>

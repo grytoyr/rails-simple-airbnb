@@ -3,6 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -10,3 +11,44 @@
   margin-top: 100px;
   width: 65%;
 }
+
+.form-container {
+  margin-top: 100px;
+  width: 40%;
+}
+
+.button-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  background-color: #4facfe;
+  border-radius: 35px;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 20px 0px;
+  text-align: center;
+  flex-grow: 1;
+  color: white;
+  border: none;
+}
+
+.article-menu-item {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #4facfe;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.article-menu-item a {
+  color: white;
+  font-size: 20px;
+}
+
