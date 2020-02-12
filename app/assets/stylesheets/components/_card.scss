@@ -1,0 +1,63 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 40px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.card {
+  border: none;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card:hover .flat-card-link-wrap {
+  opacity: 1;
+}
+
+.flat-card-image {
+  height: 170px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.flat-card-title {
+  padding: 25px 25px 0px 25px;
+}
+
+.flat-card-address {
+  padding: 0px 25px;
+}
+
+.flat-card-info-wrap {
+  padding: 20px 25px 20px 25px;
+}
+
+.card span {
+  margin-right: 20px;
+}
+
+.flat-card-link-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 25px;
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+  opacity: 0;
+  z-index: 3;
+}
+
+.flat-card-link-wrap i {
+  color: rgba(0, 0, 0, 0.15);
+  margin-left: 20px;
+}
+
+.flat-card-link-wrap i:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+

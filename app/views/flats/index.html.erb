@@ -1,0 +1,40 @@
+<div class="page-wrap">
+  <div class="flats-container">
+
+    <h1>All our flats</h1>
+    <p>All <%= @flats.length %> flats</p>
+
+    <div class="card-grid">
+
+      <% @flats.each do |flat| %>
+
+      <div class="card">
+        <%= image_tag flat.image, class:"flat-card-image" %>
+        <div class="flat-card-title"><h5><%= flat.name %></h5></div>
+        <div class="flat-card-address"><%= flat.address %></div>
+        <div class="flat-card-info-wrap">
+          <i class="fas fa-user-friends"></i> <span><%= flat.guests%></span>
+          <i class="fas fa-euro-sign"></i> <span><%= flat.price %></span>
+        </div>
+        <div class="flat-card-link-wrap">
+          <%= link_to flat_path(flat) do %>
+          <i class="fas fa-info-circle"></i>
+          <% end %>
+          <%= link_to new_flat_path do %>
+            <i class="fas fa-edit"></i>
+          <% end %>
+          <%= link_to flat_path(flat), class: 'delete',
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-trash-alt"></i>
+          <% end %>
+        </div>
+
+      </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+</div>
