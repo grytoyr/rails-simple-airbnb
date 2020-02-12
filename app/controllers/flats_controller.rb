@@ -1,5 +1,5 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: [:show, :edit, :destroy]
+  before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
   def index
     @flats = Flat.all
@@ -32,8 +32,7 @@ class FlatsController < ApplicationController
   end
 
   def update
-    @flat = Flat.new(flat_params)
-    if @flat.update
+    if @flat.update(flat_params)
       redirect_to @flat
     else
       render :new
