@@ -5,9 +5,10 @@
     <div class="left-side">
       <h1><%= @flat.name %></h1>
       <h5><%= @flat.description %></h5>
+      <p></p>
 
       <h4>More about this apartment</h4>
-      <p><%= @flat.description %></p>
+      <p><%= @flat.description * 10%></p>
 
       <div class="article-menu-item">
           <%= link_to flats_path do %>
