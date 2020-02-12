@@ -5,10 +5,6 @@ class FlatsController < ApplicationController
     @flats = Flat.all
   end
 
-  def filter
-    @flats = Flat.where("name LIKE '%params[]%'")
-  end
-
   def show
     @flat = Flat.find(params[:id])
   end
